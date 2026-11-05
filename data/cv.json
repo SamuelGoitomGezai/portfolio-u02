@@ -1,0 +1,41 @@
+{
+  "work": [
+    {
+      "title": "Butiksmedarbetare",
+      "organization": "Biltema · Sommarjobb",
+      "period": "2023"
+    },
+    {
+      "title": "Fritidsledare",
+      "organization": "Fisksätra Fryshuset",
+      "period": "2021–2022"
+    },
+    {
+      "title": "Fotbollstränare",
+      "organization": "Fisksätra IF",
+      "period": "2018–2020"
+    }
+  ],
+  "education": [
+    {
+      "title": "Fullstack JavaScript",
+      "organization": "Chas Academy",
+      "period": "1 september 2026 – 17 juni 2028"
+    },
+    {
+      "title": "Gymnasiestudier",
+      "organization": "Kärrtorp gymnasium",
+      "period": "2020–2023"
+    },
+    {
+      "title": "Grundskola",
+      "organization": "Samskolan",
+      "period": "2016–2020"
+    },
+    {
+      "title": "Grundskola",
+      "organization": "Neglinge skola",
+      "period": "2010–2016"
+    }
+  ]
+}
