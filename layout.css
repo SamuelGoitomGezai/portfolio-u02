@@ -1,0 +1,241 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100svh;
+}
+
+body > main {
+  flex: 1;
+  width: 100%;
+}
+
+.site-header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  width: 100%;
+}
+
+.site-logo {
+  position: relative;
+  z-index: 1;
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 6.0625rem;
+  height: 3.6875rem;
+  text-decoration: none;
+}
+
+.logo-mark,
+.logo-name,
+.site-footer span {
+  color: var(--brand-start);
+}
+
+.logo-mark {
+  font-family: monospace;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.15rem;
+}
+
+.logo-name {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.1875rem;
+}
+
+.desktop-navigation {
+  display: none;
+}
+
+/* Hela menyn ligger i sidflödet när details öppnas. */
+.mobile-menu {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  min-width: 0;
+}
+
+.mobile-menu summary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 3.6875rem;
+  margin-left: auto;
+  color: var(--nav-color);
+  list-style: none;
+  cursor: pointer;
+}
+
+.mobile-menu summary::-webkit-details-marker {
+  display: none;
+}
+
+.menu-icon {
+  position: relative;
+  width: 1.75rem;
+  height: 2px;
+  background-color: currentColor;
+}
+
+.menu-icon::before,
+.menu-icon::after {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: currentColor;
+  content: "";
+}
+
+.menu-icon::before { top: -8px; }
+.menu-icon::after { top: 8px; }
+
+.mobile-menu[open] .menu-icon {
+  background-color: transparent;
+}
+
+.mobile-menu[open] .menu-icon::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.mobile-menu[open] .menu-icon::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+.mobile-navigation {
+  padding: 1.5rem 0 0;
+}
+
+.mobile-navigation .nav-list {
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.site-header .nav-list a,
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.75rem;
+}
+
+.site-header .nav-list a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.social-links a {
+  width: 2.75rem;
+}
+
+.social-links img {
+  display: block;
+}
+
+.social-links .github-icon {
+  opacity: 0.6;
+}
+
+.site-header a:focus-visible,
+.site-header summary:focus-visible,
+.skip-link:focus-visible {
+  outline: 3px solid var(--heading-color);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: 0.5rem;
+  z-index: 2;
+  padding: 0.5rem 1rem;
+  transform: translateY(-200%);
+  background-color: var(--background-color);
+  color: var(--heading-color);
+  font-family: "DM Sans", sans-serif;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.site-footer {
+  width: 100%;
+  max-width: 75rem;
+  margin: 0 auto;
+  padding-bottom: 0.875rem;
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.625rem;
+}
+
+@supports (background-clip: text) or (-webkit-background-clip: text) {
+  .logo-mark,
+  .logo-name,
+  .site-footer span {
+    background-image: linear-gradient(90deg, var(--brand-start), var(--brand-end));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+/* Först här ryms logotyp, fem länkar och profilikoner på en rad. */
+@media (min-width: 1024px) {
+  body { padding-top: 3.875rem; }
+  .home-page { padding-top: 4.875rem; }
+
+  .site-header { align-items: center; }
+  .mobile-menu { display: none; }
+
+  .desktop-navigation {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .desktop-navigation .nav-list {
+    flex-direction: row;
+    gap: 2rem;
+    font-size: 1.25rem;
+  }
+
+  .desktop-navigation .social-links { margin: 0; }
+
+  .home-page .hero { padding: 16.1875rem 0 11.8125rem; }
+  .site-footer p { font-size: 1.125rem; }
+}
+
+@media (forced-colors: active) {
+  .logo-mark,
+  .logo-name,
+  .site-footer span {
+    background-image: none;
+    color: CanvasText;
+  }
+}

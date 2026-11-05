@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="images/icons/javascript.svg" type="image/svg+xml">
+  <title>About | Min portfolio</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&amp;family=Poppins:wght@400;500;700&amp;display=swap">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="layout.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Hoppa till innehållet</a>
+  <header class="site-header">
+    <a class="site-logo" href="index.html" aria-label="Samuel – startsidan">
+      <span class="logo-mark" aria-hidden="true">{SG}</span>
+      <span class="logo-name" aria-hidden="true">samuel</span>
+    </a>
+    <details class="mobile-menu">
+      <summary aria-label="Visa eller dölj huvudmenyn">
+        <span class="menu-icon" aria-hidden="true"></span>
+      </summary>
+      <nav class="mobile-navigation" aria-label="Huvudmeny">
+        <ul class="nav-list" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" aria-current="page">About</a></li>
+          <li><a href="technologies.html">Tech Stack</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <ul class="social-links" aria-label="Mina profiler" role="list">
+          <li><a href="https://github.com/SamuelGoitomGezai" aria-label="Samuel på GitHub"><img class="github-icon" src="images/icons/github.svg" alt="" width="30" height="30"></a></li>
+          <li><a href="https://www.linkedin.com/in/samuel-goitom-gezai-583b56432" aria-label="Samuel på LinkedIn"><img src="images/social/linkedin.svg" alt="" width="30" height="30"></a></li>
+        </ul>
+      </nav>
+    </details>
+      <nav class="desktop-navigation" aria-label="Huvudmeny">
+        <ul class="nav-list" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" aria-current="page">About</a></li>
+          <li><a href="technologies.html">Tech Stack</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <ul class="social-links" aria-label="Mina profiler" role="list">
+          <li><a href="https://github.com/SamuelGoitomGezai" aria-label="Samuel på GitHub"><img class="github-icon" src="images/icons/github.svg" alt="" width="30" height="30"></a></li>
+          <li><a href="https://www.linkedin.com/in/samuel-goitom-gezai-583b56432" aria-label="Samuel på LinkedIn"><img src="images/social/linkedin.svg" alt="" width="30" height="30"></a></li>
+        </ul>
+      </nav>
+  </header>
+  <div class="theme-controls">
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false" hidden>Mörkt läge</button>
+    <p class="visually-hidden" id="theme-status" role="status"></p>
+  </div>
+  <main id="main-content" tabindex="-1" class="page-content">
+  <h1 class="page-title">About Me</h1>
+  <p>
+  Jag heter Samuel och är 22 år gammal. Jag studerar Fullstack JavaScript
+  på Chas Academy.
+</p>
+  <p id="cv-status" role="status">Laddar CV…</p>
+  <button class="cv-retry" id="cv-retry" type="button" hidden>Försök igen</button>
+  <noscript><p>Aktivera JavaScript för att visa mitt CV.</p></noscript>
+  <section class="experience" aria-labelledby="work-title">
+    <h2 class="section-title" id="work-title">Work Experience</h2>
+    <ul class="cv-list" id="work-list" role="list"></ul>
+  </section>
+  <section class="education" aria-labelledby="education-title">
+    <h2 class="section-title" id="education-title">Education</h2>
+    <ul class="cv-list" id="education-list" role="list"></ul>
+  </section>
+</main>
+  <footer class="site-footer">
+    <p>Design av <span>Pawan MG</span>. Byggd av <span>Samuel</span>.</p>
+  </footer>
+  <script type="module" src="js/cv.js"></script>
+  <script type="module" src="js/theme.js"></script>
+</body>
+</html>

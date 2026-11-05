@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="images/icons/javascript.svg" type="image/svg+xml">
+  <title>Min portfolio</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&amp;family=Poppins:wght@400;700&amp;display=swap">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="layout.css">
+</head>
+<body class="home-page">
+
+  <a class="skip-link" href="#main-content">Hoppa till innehållet</a>
+  <header class="site-header">
+    <a class="site-logo" href="index.html" aria-label="Samuel – startsidan">
+      <span class="logo-mark" aria-hidden="true">{SG}</span>
+      <span class="logo-name" aria-hidden="true">samuel</span>
+    </a>
+    <details class="mobile-menu">
+      <summary aria-label="Visa eller dölj huvudmenyn">
+        <span class="menu-icon" aria-hidden="true"></span>
+      </summary>
+      <nav class="mobile-navigation" aria-label="Huvudmeny">
+        <ul class="nav-list" role="list">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="technologies.html">Tech Stack</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <ul class="social-links" aria-label="Mina profiler" role="list">
+          <li><a href="https://github.com/SamuelGoitomGezai" aria-label="Samuel på GitHub"><img class="github-icon" src="images/icons/github.svg" alt="" width="30" height="30"></a></li>
+          <li><a href="https://www.linkedin.com/in/samuel-goitom-gezai-583b56432" aria-label="Samuel på LinkedIn"><img src="images/social/linkedin.svg" alt="" width="30" height="30"></a></li>
+        </ul>
+      </nav>
+    </details>
+      <nav class="desktop-navigation" aria-label="Huvudmeny">
+        <ul class="nav-list" role="list">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="technologies.html">Tech Stack</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <ul class="social-links" aria-label="Mina profiler" role="list">
+          <li><a href="https://github.com/SamuelGoitomGezai" aria-label="Samuel på GitHub"><img class="github-icon" src="images/icons/github.svg" alt="" width="30" height="30"></a></li>
+          <li><a href="https://www.linkedin.com/in/samuel-goitom-gezai-583b56432" aria-label="Samuel på LinkedIn"><img src="images/social/linkedin.svg" alt="" width="30" height="30"></a></li>
+        </ul>
+      </nav>
+  </header>
+  <div class="theme-controls">
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false" hidden>Mörkt läge</button>
+    <p class="visually-hidden" id="theme-status" role="status"></p>
+  </div>
+  <main id="main-content" tabindex="-1" class="hero">
+  <div class="hero-text">
+    <h1 class="hero-title">
+      Hej 👋,<br>
+      jag heter<br>
+      <span class="hero-name">Samuel</span>
+    </h1>
+    <p>Jag studerar Fullstack JavaScript.</p>
+  </div>
+  <div class="hero-portrait">
+    <img
+      class="hero-photo"
+      src="images/samuel.jpeg"
+      alt="Porträtt av Samuel"
+      width="349"
+      height="349"
+    >
+  </div>
+</main>
+  <footer class="site-footer">
+    <p>Design av <span>Pawan MG</span>. Byggd av <span>Samuel</span>.</p>
+  </footer>
+  <script type="module" src="js/theme.js"></script>
+</body>
+</html>

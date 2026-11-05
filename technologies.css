@@ -1,0 +1,94 @@
+.tech-page .tech-heading {
+  margin: 0;
+  font-size: 1.75rem;
+  line-height: 1.3;
+  letter-spacing: 0;
+}
+
+.tech-description {
+  margin: 1rem 0 0;
+}
+
+.tech-list,
+.tools-list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: center;
+  gap: 2rem 1.5rem;
+  margin: 2rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tech-list li,
+.tools-list li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+}
+
+.tech-list img,
+.tools-list img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Mobillayouten i skissen har en separat grupp med verktyg. */
+.tech-list .tech-desktop-only {
+  display: none;
+}
+
+.tech-tailwind {
+  order: 1;
+}
+
+.tech-bootstrap {
+  order: 2;
+}
+
+.tech-sass {
+  order: 3;
+}
+
+.tech-tools {
+  margin-top: 2.5rem;
+}
+
+@media (min-width: 1024px) {
+  .tech-page {
+    padding-top: 10rem;
+    padding-bottom: 6rem;
+  }
+
+  .tech-page .tech-heading {
+    font-size: 2.625rem;
+    line-height: 1.625rem;
+  }
+
+  .tech-description {
+    margin-top: 2rem;
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+
+  .tech-list {
+    grid-template-columns: repeat(6, minmax(0, 8.1875rem));
+    justify-content: space-between;
+    gap: 4rem 2rem;
+    margin-top: 11rem;
+  }
+
+  .tech-list li {
+    order: 0;
+  }
+
+  .tech-list .tech-desktop-only {
+    display: flex;
+  }
+
+  .tech-tools {
+    display: none;
+  }
+}
